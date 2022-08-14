@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="reset.css" />
+
+    <title>DrivenEats</title>
+  </head>
+  <body>
+    <div class="conteudo-da-pagina">
+      <div class="menu-topo">
+        <div class="nome-do-site">
+          <h1>DrivenEats</h1>
+        </div>
+
+        <div class="subtitulo-do-site">
+          <h2>Sua comida em 6 minutos</h2>
+        </div>
+      </div>
+
+      <div class="menu">
+      <div class="opcoes-de-pratos">
+        <div class="frase-menu-pratos">
+          <p>Primeiro, seu prato</p>
+        </div>
+
+        <div class="pratos">
+          <div class="prato1" onclick="selecionarPrato('prato1')">
+            <div class="conteudo">
+            <img src="./imagens/yakisoba.jpg" />
+            <h1> Yakisoba</h1>
+            <h2>Opção vegetariana, 500g</h2>
+            <h3>R$<span class="preco">18,90</span></h3>
+            </div>
+            <div class="icone">
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          </div>
+
+          <div class="prato2" onclick="selecionarPrato('prato2')">
+            <div class="conteudo">
+            <img src="./imagens/hotphi.jpg" />
+            <h1>Hot philadelphia</h1>
+            <h2>Salmão e cream cheese, 15 unidades</h2>
+            <h3>R$<span class="preco">20,99</span></h3>
+            </div>
+            <div class="icone">
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          </div>
+
+          <div class="prato3" onclick="selecionarPrato('prato3')">
+            <div class="conteudo">
+            <img src="./imagens/poke.jpg" />
+            <h1> Poke</h1>
+            <h2>Salmão, 500g</h2>
+            <h3><span class="preco">30,90</span></h3>
+          </div>
+          <div class="icone">
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          </div>
+
+          <div class="prato4" onclick="selecionarPrato('prato4')">
+            <div class="conteudo">
+            <img src="./imagens/uramaki.jpg" />
+            <h1>Uramaki</h1>
+            <h2>Salmão e cream cheese, 15 unidades</h2>
+            <h3><span class="preco">19,99</span></h3>
+          </div>
+          <div class="icone">
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="opcoes-de-bebidas">
+        <div class="frase-menu-bebidas">
+            <p>Agora, sua bebida</p>
+        </div>
+    
+        <div class="bebidas">
+            <div class="bebida1" onclick="selecionarBebida('bebida1')">
+              <div class="conteudo">
+                <img src="./imagens/coca cola 350.jpg" />
+                <h1> Coca-cola</h1>
+                <h2>Lata 350ml</h2>
+                <h3><span class="preco">6,90</span></h3>
+              </div>
+                <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+
+            <div class="bebida2" onclick="selecionarBebida('bebida2')">
+              <div class="conteudo">
+                <img src="./imagens/coca cola 2l.jpg" />
+                <h1> Coca-cola</h1>
+                <h2>Garrafa 2 litros</h2>
+                <h3><span class="preco">12,90</span></h3>
+              </div>
+                <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+
+            <div class="bebida3" onclick="selecionarBebida('bebida3')">
+              <div class="conteudo">
+                <img src="./imagens/mate leao.jpg" />
+                <h1> Mate-leão</h1>
+                <h2>Garrafinha 350ml</h2>
+                <h3><span class="preco">5,90</span></h3>
+              </div>
+                <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+
+            <div class="bebida4" onclick="selecionarBebida('bebida4')">
+              <div class="conteudo">
+                <img src="./imagens/ice tea.jpg" />
+                <h1>Ice tea</h1>
+                <h2>Garrafinha 350ml</h2>
+                <h3><span class="preco">5,50</span></h3>
+              </div>
+                <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+            </div>
+
+
+        </div>
+      </div>
+
+      <div class="opcoes-de-sobremesas">
+          <div class="frase-menu-sobremesas">
+              <p>Por fim, sua sobremesa</p>
+          </div>
+      
+          <div class="sobremesas">
+              <div class="sobremesa1" onclick="selecionarSobremesa('sobremesa1')">
+                <div class="conteudo">
+                <img src="./imagens/harumaki choco.jpg" />
+                <h1> Harumaki</h1>
+                <h2>Chocolate, 2 unidades</h2>
+                <h3><span class="preco">10,90</span></h3>
+              </div>
+              <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              </div>
+
+              <div class="sobremesa2" onclick="selecionarSobremesa('sobremesa2')">
+                <div class="conteudo">
+                <img src="./imagens/harumaki doce de leite.jpg" />
+                <h1> Harumaki</h1>
+                <h2>Doce de leite, 2 unidades</h2>
+                <h3><span class="preco">9,90</span></h3>
+              </div>
+              <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              </div>
+
+              <div class="sobremesa3" onclick="selecionarSobremesa('sobremesa3')">
+                <div class="conteudo">
+                <img src="./imagens/harumaki romeu e julieta.jpg" />
+                <h1> Harumaki</h1>
+                <h2>Romeu e Julieta, 2 unidades</h2>
+                <h3><span class="preco">8,90</span></h3>
+              </div>
+              <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              </div>
+
+              <div class="sobremesa4" onclick="selecionarSobremesa('sobremesa4')">
+                <div class="conteudo">
+                <img src="./imagens/pudim.jpg" />
+                <h1> Pudim</h1>
+                <h2>Pequeno</h2>
+                <h3><span class="preco">7,90</span></h3>
+              </div>
+              <div class="icone">
+                <ion-icon name="checkmark-circle"></ion-icon>
+              </div>
+              </div>
+          </div>
+      </div>
+    </div>
+      <class class="menu-final">
+        <div onclick="fecharPedido()" class="botao-fechar-pedido">
+            <p>Selecione os 3 itens<br>
+            para fechar o pedido</p>
+        </div>
+      </div>
+    </div>
+    <script  src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
