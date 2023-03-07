@@ -1,111 +1,111 @@
-let seletor1;
+let seletorPrato;
 
-function selecionarPrato(classeBotao){
+function selecionarPrato(classeBotao) {
 
     const botaoSelecionado = document.querySelector('.pratos .selecionado');
     const iconeSelecionado = document.querySelector('.pratos .aparecer');
 
-    if (botaoSelecionado !== null){
+    if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove('selecionado');
     }
 
-    if(iconeSelecionado !== null){
-      iconeSelecionado.classList.remove('aparecer');
+    if (iconeSelecionado !== null) {
+        iconeSelecionado.classList.remove('aparecer');
     }
 
-    seletor1 = '.'+classeBotao;    
-    const botao = document.querySelector(seletor1);
+    seletorPrato = '.' + classeBotao;
+    const botao = document.querySelector(seletorPrato);
     botao.classList.add('selecionado');
 
-    const icone = document.querySelector(seletor1 + ' .icone');
+    const icone = document.querySelector(seletorPrato + ' .icone');
     icone.classList.add('aparecer');
 
     habilitaFecharPedido();
 }
 
-let seletor2;
+let seletorBebida;
 
-function selecionarBebida(classeBotao){
+function selecionarBebida(classeBotao) {
 
     const botaoSelecionado = document.querySelector('.bebidas .selecionado');
     const iconeSelecionado = document.querySelector('.bebidas .aparecer');
 
-    if ( botaoSelecionado !== null){
+    if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove('selecionado');
     }
 
-    if(iconeSelecionado !== null){
+    if (iconeSelecionado !== null) {
         iconeSelecionado.classList.remove('aparecer');
     }
 
-    seletor2 = '.'+classeBotao;    
-    const botao = document.querySelector(seletor2);
+    seletorBebida = '.' + classeBotao;
+    const botao = document.querySelector(seletorBebida);
     botao.classList.add('selecionado');
 
-    const icone = document.querySelector(seletor2 + ' .icone');
+    const icone = document.querySelector(seletorBebida + ' .icone');
     icone.classList.add('aparecer');
 
     habilitaFecharPedido();
 
 }
 
-let seletor3;
+let seletorSobremesa;
 
-function selecionarSobremesa(classeBotao){
+function selecionarSobremesa(classeBotao) {
 
     const botaoSelecionado = document.querySelector('.sobremesas .selecionado');
     const iconeSelecionado = document.querySelector('.sobremesas .aparecer');
 
-    if ( botaoSelecionado !== null){
+    if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove('selecionado');
     }
 
-    if(iconeSelecionado !== null){
+    if (iconeSelecionado !== null) {
         iconeSelecionado.classList.remove('aparecer');
     }
 
-    seletor3 = '.'+classeBotao;    
-    const botao = document.querySelector(seletor3);
+    seletorSobremesa = '.' + classeBotao;
+    const botao = document.querySelector(seletorSobremesa);
     botao.classList.add('selecionado');
 
-    const icone = document.querySelector(seletor3 + ' .icone');
+    const icone = document.querySelector(seletorSobremesa + ' .icone');
     icone.classList.add('aparecer');
 
     habilitaFecharPedido();
 
 }
 
-function habilitaFecharPedido(){
-    const novoBotao1 = document.querySelector('.botao-fechar-pedido p');
-    const novoBotao2 = document.querySelector('.botao-fechar-pedido');
+function habilitaFecharPedido() {
+    const textoBotao = document.querySelector('.botao-fechar-pedido p');
+    const botao = document.querySelector('.botao-fechar-pedido');
 
-    if (seletor1 !== undefined){
-        if (seletor2 !== undefined){
-            if (seletor3 !== undefined){
-                novoBotao1.innerHTML = "Fechar pedido";
-                novoBotao2.classList.add('botao-selecionado');
+    if (seletorPrato !== undefined) {
+        if (seletorBebida !== undefined) {
+            if (seletorSobremesa !== undefined) {
+                textoBotao.innerHTML = "Fechar pedido";
+                botao.classList.add('botao-selecionado');
             }
         }
     }
 }
 
-let soma;
+let gastoTotal;
 
-function fecharPedido(){
-    const prato = (document.querySelector(seletor1 + ' h1').innerHTML);
-    const bebida = (document.querySelector(seletor2 + ' h1').innerHTML);
-    const sobremesa = (document.querySelector(seletor3 + ' h1').innerHTML);
+function fecharPedido() {
+    const prato = (document.querySelector(seletorPrato + ' h1').innerHTML);
+    const bebida = (document.querySelector(seletorBebida + ' h1').innerHTML);
+    const sobremesa = (document.querySelector(seletorSobremesa + ' h1').innerHTML);
 
-    const preco1 = Number(((document.querySelector(seletor1 + ' .preco').innerHTML).replace(',','.')));
-    const preco2 = Number(((document.querySelector(seletor2 + ' .preco').innerHTML).replace(',','.')));
-    const preco3 = Number(((document.querySelector(seletor3 + ' .preco').innerHTML).replace(',','.')));
-    soma = (preco1 + preco2 + preco3).toFixed(2);
+    const precoPrato = Number(((document.querySelector(seletorPrato + ' .preco').innerHTML).replace(',', '.')));
+    const precoBebida = Number(((document.querySelector(seletorBebida + ' .preco').innerHTML).replace(',', '.')));
+    const precoSobremesa = Number(((document.querySelector(seletorSobremesa + ' .preco').innerHTML).replace(',', '.')));
+    gastoTotal = (precoPrato + precoBebida + precoSobremesa).toFixed(2);
 
     mensagem = `Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
     - Bebida: ${bebida}
     - Sobremesa: ${sobremesa}
-    Total: ${soma}`
+    Total: ${gastoTotal}`
 
     open('https://wa.me/5521993718193?text=' + encodeURIComponent(mensagem));
 }
